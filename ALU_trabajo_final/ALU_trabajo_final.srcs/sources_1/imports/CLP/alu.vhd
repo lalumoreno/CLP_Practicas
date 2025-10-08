@@ -2,9 +2,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
--- Luego decidir si signed o unsigned 
--- Luego decidir si aumentar a 8 bits y recibir salida por UART 
-
 entity ALU is
     Port (
         A      : in  STD_LOGIC_VECTOR(3 downto 0);

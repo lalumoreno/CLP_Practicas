@@ -14,7 +14,7 @@ architecture sim of uart_alu_top_tb is
     signal leds     : std_logic_vector(3 downto 0);
 
     -- Constantes UART
-    constant CLK_PERIOD : time := 10 ns;  -- 100 MHz clock
+    constant CLK_PERIOD : time := 20 ns;  -- 50 MHz clock
     constant BAUD_RATE  : integer := 115200;
     constant BIT_PERIOD : time := 1 sec / BAUD_RATE;
 
@@ -67,32 +67,32 @@ begin
     begin
         -- Reset inicial
         reset <= '1';
-        wait for 200 ns;
+        wait for 10 us;
         reset <= '0';
-        wait for 200 ns;
+        wait for 10 us;
 
         -- Envío de datos por UART: A = 0011 (3), B = 0101 (5), Op = 000 (suma)
         report "Enviando A = 3, B = 5, Op = 000 (Suma)";
         uart_send_byte(rxd, x"03");  -- A = 3
         uart_send_byte(rxd, x"05");  -- B = 5
         uart_send_byte(rxd, x"00");  -- Op = 0 → Suma
-        wait for 5 ms;
+        wait for 200 us;
 
         -- Envío de datos: A = 7, B = 2, Op = 001 (resta)
         report "Enviando A = 7, B = 2, Op = 001 (Resta)";
         uart_send_byte(rxd, x"07");
         uart_send_byte(rxd, x"02");
         uart_send_byte(rxd, x"01");
-        wait for 5 ms;
+        wait for 200 us;
 
         -- Envío de datos: A = 9, B = 3, Op = 010 (AND)
         report "Enviando A = 9, B = 3, Op = 010 (AND)";
         uart_send_byte(rxd, x"09");
         uart_send_byte(rxd, x"03");
         uart_send_byte(rxd, x"02");
-        wait for 5 ms;
+        wait for 200 us;
 
-        report "Fin de la simulación";
+        report "Fin de la simulacion";
         wait;
     end process;
 

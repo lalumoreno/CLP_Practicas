@@ -38,7 +38,7 @@ use IEEE.numeric_std.all;
 entity uart_rx is
 	generic(
 		BAUD_RATE: integer := 115200; 	-- Baud rate
-		CLOCK_RATE: integer := 50E6
+		CLOCK_RATE: integer := 50E6 -- 50MHz
 	);
 	port(
 		-- Write side inputs

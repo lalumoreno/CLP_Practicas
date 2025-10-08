@@ -35,7 +35,7 @@ use IEEE.numeric_std.all;
 
 entity uart_baud_gen is
 	generic(
-		BAUD_RATE: natural := 57600;	-- Baud rate
+		BAUD_RATE: natural := 115200;	-- Baud rate
 		CLOCK_RATE: natural := 50E6
 
 	);
