@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_2" LaunchPart="xc7z010clg400-1" LaunchTime="1759963854">
+  <File Type="PA-TCL" Name="uart_alu_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="uart_alu_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="uart_alu_top.vds"/>
+  <File Type="RDS-UTIL" Name="uart_alu_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="uart_alu_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="uart_alu_top.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/CLP/alu.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../alu.vhd"/>
+        <Attr Name="ImportTime" Val="1759672202"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Archivos para la práctica-2-20251002/meta_harden.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/Archivos para la práctica-2-20251002/meta_harden.vhd"/>
+        <Attr Name="ImportTime" Val="1759452342"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Archivos para la práctica-2-20251002/uart_rx.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/Archivos para la práctica-2-20251002/uart_rx.vhd"/>
+        <Attr Name="ImportTime" Val="1759452342"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Archivos para la práctica-2-20251002/uart_baud_gen.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/Archivos para la práctica-2-20251002/uart_baud_gen.vhd"/>
+        <Attr Name="ImportTime" Val="1759452342"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Archivos para la práctica-2-20251002/uart_rx_ctl.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/Archivos para la práctica-2-20251002/uart_rx_ctl.vhd"/>
+        <Attr Name="ImportTime" Val="1759452342"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Downloads/uart_alu_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/uart_alu_top.vhd"/>
+        <Attr Name="ImportTime" Val="1759804025"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="uart_alu_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Downloads/Arty-Z7-10-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Downloads/Arty-Z7-10-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1759677602"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Downloads/Arty-Z7-10-Master.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

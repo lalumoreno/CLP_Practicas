@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ALU_4b.srcs/sources_1/imports/Design/ALU.vhd" \
+"../../../../ALU_4b.srcs/sources_1/imports/Design/meta_harden.vhd" \
+"../../../../ALU_4b.srcs/sources_1/imports/Design/uart_rx.vhd" \
+"../../../../ALU_4b.srcs/sources_1/imports/Design/uart_alu_top.vhd" \
+"../../../../ALU_4b.srcs/sources_1/imports/Design/uart_baud_gen.vhd" \
+"../../../../ALU_4b.srcs/sources_1/imports/Design/uart_rx_ctl.vhd" \
+"../../../../ALU_4b.srcs/sim_1/imports/Sim/uart_alu_top_tb.vhd" \
+
+# Do not sort compile order
+nosort
