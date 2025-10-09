@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../ALU_trabajo_final.srcs/sources_1/imports/CLP/alu.vhd" \
-"../../../../ALU_trabajo_final.srcs/sim_1/imports/CLP/alu_tb.vhd" \
-
-# Do not sort compile order
-nosort

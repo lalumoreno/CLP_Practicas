@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1759966859">
-  <File Type="PA-TCL" Name="uart_alu_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="uart_alu_top_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="uart_alu_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="uart_alu_top.vds"/>
-  <File Type="RDS-UTIL" Name="uart_alu_top_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="uart_alu_top_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="uart_alu_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="uart_alu_top_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="uart_alu_top_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1759975583">
+  <File Type="PA-TCL" Name="uart_alu_top_VIO.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="uart_alu_top_VIO_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="uart_alu_top_VIO_reports.tcl"/>
+  <File Type="RDS-RDS" Name="uart_alu_top_VIO.vds"/>
+  <File Type="RDS-UTIL" Name="uart_alu_top_VIO_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="uart_alu_top_VIO_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="uart_alu_top_VIO.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="uart_alu_top_VIO_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="uart_alu_top_VIO_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Design/ALU.vhd">
@@ -35,6 +35,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Design/uart_alu_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../ALU/Design/uart_alu_top.vhd"/>
+        <Attr Name="ImportTime" Val="1759964352"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/Design/uart_baud_gen.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../ALU/Design/uart_baud_gen.vhd"/>
@@ -51,17 +59,17 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Design/uart_alu_top.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/Design/uart_alu_top_VIO.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../ALU/Design/uart_alu_top.vhd"/>
-        <Attr Name="ImportTime" Val="1759964352"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../ALU/Design/uart_alu_top_VIO.vhd"/>
+        <Attr Name="ImportTime" Val="1759967996"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="uart_alu_top"/>
+      <Option Name="TopModule" Val="uart_alu_top_VIO"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -83,4 +91,5 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="vio_0"/>
 </GenRun>
