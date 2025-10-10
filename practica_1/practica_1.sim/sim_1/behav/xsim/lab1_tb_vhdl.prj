@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../practica_1.srcs/sources_1/imports/Archivos para la práctica-20250930/lab1.vhd" \
-"../../../../practica_1.srcs/sim_1/imports/Archivos para la práctica-20250930/lab1_tb.vhd" \
-
-# Do not sort compile order
-nosort
