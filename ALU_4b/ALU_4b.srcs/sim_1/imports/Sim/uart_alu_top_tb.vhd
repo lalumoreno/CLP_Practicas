@@ -7,10 +7,9 @@ end;
 
 architecture sim of uart_alu_top_tb is
 
-    -- SeÃ±ales del DUT (Device Under Test)
     signal clk      : std_logic := '0';
     signal reset    : std_logic := '0';
-    signal rxd      : std_logic := '1';  -- UART IDLE = '1'
+    signal rxd      : std_logic := '1';
     signal leds     : std_logic_vector(3 downto 0);
 
     -- Constantes UART
@@ -39,7 +38,7 @@ architecture sim of uart_alu_top_tb is
 begin
 
     --------------------------------------------------------------------
-    -- Instancia del mÃ³dulo a probar (DUT)
+    -- Instancia de ALU top
     --------------------------------------------------------------------
     DUT : entity work.uart_alu_top
         port map (
@@ -50,7 +49,7 @@ begin
         );
 
     --------------------------------------------------------------------
-    -- GeneraciÃ³n de reloj
+    -- Generaci�n del reloj
     --------------------------------------------------------------------
     clk_process : process
     begin

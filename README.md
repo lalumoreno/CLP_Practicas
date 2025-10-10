@@ -72,7 +72,3 @@ El proyecto incluye un **testbench** (`uart_alu_top_tb.vhd`) que envía diferent
 **Laura Moreno**   
 Octubre 2025
 
----
-
-## 📁 Estructura del repositorio
-

@@ -37,7 +37,7 @@ architecture Behavioral of uart_alu_top is
 begin
 
     ------------------------------------------------------------------
-    -- Instancia UART RX (usa nombres de puerto exactos del módulo)
+    -- Instancia UART RX
     ------------------------------------------------------------------
     UartRX : entity work.uart_rx
         port map (
@@ -50,8 +50,8 @@ begin
         );
 
     ------------------------------------------------------------------
-    -- Captura de bytes recibidos (edge-detect en rx_ready)
-    -- rx_ready_prev guarda el estado previo; solo procesamos en 0->1
+    -- Captura de bytes recibidos
+    -- rx_ready_prev guarda el estado previo; solo procesa en 0->1
     ------------------------------------------------------------------
     process(clk)
     begin
@@ -70,11 +70,11 @@ begin
                 -- detectar flanco de subida de rx_ready
                 if (rx_ready = '1' and rx_ready_prev = '0') then
                     case byte_count is
-                        when 0 =>
+                        when 0 => -- Guardar dato temporal
                             A_buf <= rx_data(3 downto 0);
                             byte_count <= 1;
                             alu_ready <= '0';
-                        when 1 =>
+                        when 1 => -- Guardar dato temporal
                             B_buf <= rx_data(3 downto 0);
                             byte_count <= 2;
                             alu_ready <= '0';
@@ -95,7 +95,7 @@ begin
     end process;
 
     ------------------------------------------------------------------
-    -- Instancia ALU (combinacional)
+    -- Instancia ALU
     ------------------------------------------------------------------
     ALU_inst : entity work.ALU
         port map (
@@ -107,7 +107,7 @@ begin
         );
 
     ------------------------------------------------------------------
-    -- Latch del resultado a los LEDs cuando alu_ready = '1'
+    -- Resultado a los LEDs cuando alu_ready = '1'
     -- Se limpia alu_ready aquí para que sea un pulso (se usa una vez)
     ------------------------------------------------------------------
     process(clk)
@@ -116,7 +116,7 @@ begin
             if reset = '1' then
                 leds_reg <= (others => '0');
             else
-                leds_reg <= Result_uart;  -- capturamos el resultado actual
+                leds_reg <= Result_uart;
             end if;
         end if;
     end process;

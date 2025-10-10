@@ -25,7 +25,7 @@ architecture uart_alu_top_arq of uart_alu_top_VIO is
 begin
 
 	------------------------------------------------------------------
-    -- Instancia ALU (combinacional)
+    -- Instancia ALU
     ------------------------------------------------------------------
     uart_alu_top_inst : entity work.uart_alu_top 
         port map (

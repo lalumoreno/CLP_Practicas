@@ -2,8 +2,8 @@
 # Vivado v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Thu Oct  9 20:10:27 2025
-# Process ID: 15824
+# Start of session at: Fri Oct 10 16:36:43 2025
+# Process ID: 1432
 # Current directory: C:/Users/ASUS/Documents/CESE/CLP/Practicas/ALU_4b/ALU_4b.runs/impl_1
 # Command line: vivado.exe -log uart_alu_top_VIO.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uart_alu_top_VIO.tcl -notrace
 # Log file: C:/Users/ASUS/Documents/CESE/CLP/Practicas/ALU_4b/ALU_4b.runs/impl_1/uart_alu_top_VIO.vdi

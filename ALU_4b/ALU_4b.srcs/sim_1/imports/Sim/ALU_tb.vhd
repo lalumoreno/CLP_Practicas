@@ -6,7 +6,6 @@ entity ALU_tb is
 end entity;
 
 architecture sim of ALU_tb is
-    -- Señales de prueba
     signal A, B     : STD_LOGIC_VECTOR(3 downto 0);
     signal Op       : STD_LOGIC_VECTOR(2 downto 0);
     signal Result   : STD_LOGIC_VECTOR(3 downto 0);
@@ -23,7 +22,6 @@ begin
             Zero   => Zero
         );
 
-    -- Proceso de estimulación
     stim_proc: process
     begin
         -- Caso 1: Suma
@@ -71,7 +69,6 @@ begin
         Op <= "111";  -- >>1
         wait for 10 ns;
 
-        -- Fin de simulación
         wait;
     end process;
 end architecture;

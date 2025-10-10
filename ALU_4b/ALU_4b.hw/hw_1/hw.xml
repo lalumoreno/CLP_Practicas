@@ -13,6 +13,12 @@
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
   <ObjectList object_type="hw_probe" gui_info="">
     <Object name="probe_leds[3:0]" gui_info="hw_vios/hw_vio_1=1_exp"/>
     <Object name="probe_reset" gui_info="hw_vios/hw_vio_1=0"/>
@@ -55,7 +61,7 @@
         <net name="probe_reset"/>
       </nets>
     </probe>
-    <probe type="vio_output" busType="bus" source="netlist" spec="VIO_OUTPUT_V2_RT">
+    <probe type="vio_output" busType="net" source="netlist" spec="VIO_OUTPUT_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="DISPLAY_HINT" value="0.OutputDisplay:OutputText;|1.OutputDisplay:OutputText;|2.OutputDisplay:OutputText;"/>
         <Option Id="DISPLAY_VISIBILITY" value=""/>
