@@ -27,7 +27,7 @@ begin
 	------------------------------------------------------------------
     -- Instancia ALU (combinacional)
     ------------------------------------------------------------------
-    ALU_TOP_inst : entity work.uart_alu_top 
+    uart_alu_top_inst : entity work.uart_alu_top 
         port map (
             clk   => clk_i,
             reset => probe_reset,

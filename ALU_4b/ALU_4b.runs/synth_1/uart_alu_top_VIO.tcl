@@ -16,9 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-25456-LAU/incrSyn
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param synth.incrementalSynthesisCache C:/Users/ASUS/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-18692-LAU/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
@@ -43,7 +41,7 @@ read_vhdl -library xil_defaultlib {
   C:/Users/ASUS/Documents/CESE/CLP/Practicas/ALU_4b/ALU_4b.srcs/sources_1/imports/Design/uart_rx_ctl.vhd
   C:/Users/ASUS/Documents/CESE/CLP/Practicas/ALU_4b/ALU_4b.srcs/sources_1/imports/Design/uart_alu_top_VIO.vhd
 }
-read_ip -quiet c:/Users/ASUS/Documents/CESE/CLP/Practicas/ALU_4b/ALU_4b.srcs/sources_1/ip/vio_0/vio_0.xci
+read_ip -quiet C:/Users/ASUS/Documents/CESE/CLP/Practicas/ALU_4b/ALU_4b.srcs/sources_1/ip/vio_0/vio_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/ASUS/Documents/CESE/CLP/Practicas/ALU_4b/ALU_4b.srcs/sources_1/ip/vio_0/vio_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/ASUS/Documents/CESE/CLP/Practicas/ALU_4b/ALU_4b.srcs/sources_1/ip/vio_0/vio_0_ooc.xdc]
 

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Wed Oct  8 21:07:49 2025
+| Date             : Thu Oct  9 20:11:23 2025
 | Host             : LAU running 64-bit major release  (build 9200)
 | Command          : report_power -file uart_alu_top_VIO_power_routed.rpt -pb uart_alu_top_VIO_power_summary_routed.pb -rpx uart_alu_top_VIO_power_routed.rpx
 | Design           : uart_alu_top_VIO
@@ -151,11 +151,6 @@ Table of Contents
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
 | uart_alu_top_VIO                                                                   |     0.001 |
-|   ALU_TOP_inst                                                                     |    <0.001 |
-|     UartRX                                                                         |    <0.001 |
-|       meta_harden_rxd_i0                                                           |    <0.001 |
-|       uart_baud_gen_rx_i0                                                          |    <0.001 |
-|       uart_rx_ctl_i0                                                               |    <0.001 |
 |   dbg_hub                                                                          |     0.001 |
 |     inst                                                                           |     0.001 |
 |       BSCANID.u_xsdbm_id                                                           |     0.001 |
@@ -201,9 +196,9 @@ Table of Contents
 |                     gconvfifo.rf                                                   |    <0.001 |
 |                       grf.rf                                                       |    <0.001 |
 |                         gntv_or_sync_fifo.gcx.clkx                                 |    <0.001 |
-|                           gnxpm_cdc.gsync_stage[1].rd_stg_inst                     |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[1].rd_stg_inst                     |     0.000 |
 |                           gnxpm_cdc.gsync_stage[1].wr_stg_inst                     |    <0.001 |
-|                           gnxpm_cdc.gsync_stage[2].rd_stg_inst                     |    <0.001 |
+|                           gnxpm_cdc.gsync_stage[2].rd_stg_inst                     |     0.000 |
 |                           gnxpm_cdc.gsync_stage[2].wr_stg_inst                     |    <0.001 |
 |                         gntv_or_sync_fifo.gl0.rd                                   |    <0.001 |
 |                           gras.rsts                                                |    <0.001 |
@@ -237,6 +232,11 @@ Table of Contents
 |           U_SYNC                                                                   |    <0.001 |
 |         SWITCH_N_EXT_BSCAN.bscan_inst                                              |    <0.001 |
 |         SWITCH_N_EXT_BSCAN.bscan_switch                                            |    <0.001 |
+|   uart_alu_top_inst                                                                |    <0.001 |
+|     UartRX                                                                         |    <0.001 |
+|       meta_harden_rxd_i0                                                           |    <0.001 |
+|       uart_baud_gen_rx_i0                                                          |    <0.001 |
+|       uart_rx_ctl_i0                                                               |    <0.001 |
 |   vio_inst                                                                         |    <0.001 |
 |     inst                                                                           |    <0.001 |
 |       DECODER_INST                                                                 |    <0.001 |
