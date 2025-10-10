@@ -57,13 +57,6 @@ El proyecto incluye un **testbench** (`uart_alu_top_tb.vhd`) que envía diferent
 - `A=7, B=2, Op=001` → Resultado: 5  
 - `A=9, B=3, Op=010` → Resultado: 1  
 
-### Cómo ejecutar la simulación en Vivado
-
-1. Abre el proyecto en Vivado.  
-2. Agrega `uart_alu_top_tb.vhd` como archivo de simulación.  
-3. Ejecuta *Run Simulation → Run Behavioral Simulation*.  
-4. Observa en el waveform las señales `rxd`, `rx_data`, `rx_ready`, `A`, `B`, `Op`, y `leds`.
-
 ---
 
 
